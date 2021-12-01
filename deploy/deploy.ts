@@ -2,7 +2,7 @@ import {DeployFunction} from 'hardhat-deploy/types';
 
 
 const func: DeployFunction = async function ({deployments, getNamedAccounts, network, getChainId}) {
-    const {deploy} = deployments;
+    const {deploy,read,get,execute} = deployments;
     const {owner} = await getNamedAccounts();
 
     console.log('chainId:', await getChainId());
@@ -12,6 +12,8 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
         args: ['new greeting'],
         log: true,
     });
+
+    console.log(`${await read('Greeter','greet')}`);
 
 };
 export default func;
