@@ -6,10 +6,12 @@ async function main() {
 
     const {owner} = await getNamedAccounts();
 
-    // read
-    const supply = await read('Dai', 'totalSupply');
-    console.log("Dai totalSupply:", supply.toString());
-    
+    // // read
+    // const supply = await read('Dai', 'totalSupply');
+    // console.log("Dai totalSupply:", supply.toString());
+
+    console.log(`${await read('Greeter','greet')}`);
+
 }
 
 

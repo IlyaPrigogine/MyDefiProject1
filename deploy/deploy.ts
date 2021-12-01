@@ -13,7 +13,7 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
         log: true,
     });
 
-    console.log(`${await read('Greeter','greet')}`);
+
 
 };
 export default func;
