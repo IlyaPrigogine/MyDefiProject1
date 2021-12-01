@@ -6,11 +6,10 @@ async function main() {
 
     const {owner} = await getNamedAccounts();
 
-    // // read
-    // const supply = await read('Dai', 'totalSupply');
-    // console.log("Dai totalSupply:", supply.toString());
-
-    console.log(`${await read('Greeter','greet')}`);
+    /* code of Greeter func*/
+    // console.log(`BEFORE ${await read('Greeter','greet')}`);
+    // await execute('Greeter',{from: owner}, 'setGreeting', 'A new greeting');
+    // console.log(`AFTER: ${await read('Greeter','greet')}`);
 
 }
 
